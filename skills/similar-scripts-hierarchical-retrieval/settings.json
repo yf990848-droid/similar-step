@@ -1,0 +1,58 @@
+{
+  "infer_api_url": "https://snapengine.cida.cce.prod-szv-y.dragon.tools.huawei.com/v1/test-agent/infer/request",
+  "token_api_url": "https://romapi.huawei.com/api/ssoproxysvr/v2/w3tokens",
+
+  "fixed_request_fields": {
+    "language": "python",
+    "msg_type": "INFERENCE",
+    "user_rag_switch": true,
+    "result_type": ["use_cache", "use_retrieval"],
+    "trigger_mode": "MANUAL",
+    "trigger_node": "RAG_RETRIEVAL"
+  },
+
+  "fixed_headers": {
+    "Content-Type": "application/json",
+    "User-Agent": "PostmanRuntime/7.51.1",
+    "Accept": "text/event-stream",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Connection": "keep-alive",
+    "agent-type": "TestAgent",
+    "caller_name": "ai4xxx"
+  },
+
+  "token_headers": {
+    "X-HW-ID": "com.huawei.ipd.coretool.coremlops",
+    "X-HW-APPKEY": "3JUnVhZLKMnlO3FPOAwOxA==",
+    "Content-Type": "application/json"
+  },
+
+  "fallback_trigger_regexes": [
+    "((logger\\.step\\(.*?\\))|(#\\s*.*?))\\n",
+    "(self\\.logStep\\(.*?\\))\\n"
+  ],
+
+  "token": {
+    "refresh_after_days": 2.5,
+    "retry_on_401": true
+  },
+
+  "w3_credential": {
+    "account_enc": "mvAT4sO9nvjOiDo=",
+    "password_enc": "ieof2MrI+IiV"
+  },
+
+  "request": {
+    "per_step_timeout_sec": 120,
+    "max_workers": 4,
+    "connect_timeout_sec": 10
+  },
+
+  "proxy": null,
+
+  "verify_ssl": false,
+
+  "debug_dump_raw": false,
+
+  "xml_path": "auto"
+}
